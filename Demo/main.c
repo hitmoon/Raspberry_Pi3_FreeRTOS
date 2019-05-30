@@ -34,26 +34,25 @@
 
 
 void task1(void *pParam) {
-print(" task1 ");
+    print(" task1 start");
 	int i = 0;
 	while(1) 
 	{
-		led(1);
-		vTaskDelay(1000);
+		print(" task 1 running ");
 		led(0);
-		vTaskDelay(1000);
-		print(" task 1 run ");
+		vTaskDelay(500);
 	}
 }
 
 void task2(void *pParam) {
 
-print(" task2 ");
+    print(" task2  start");
 	int i = 0;
 	while(1) 
 	{
-		vTaskDelay(2000);
-		print(" task2 run ");
+		print(" task2 running ");
+		led(1);
+		vTaskDelay(1000);
 	}
 }
 
